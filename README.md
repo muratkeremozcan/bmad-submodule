@@ -10,7 +10,7 @@ A submodule is a pointer to another git repository, akin to a bookmark. Your rep
 
 **Why use this:**
 
-- Clean PRs (2 files vs 300+)
+- Clean PRs (2 files vs 300+ BMAD framework related files)
 - Central updates (one BMAD repo → all projects)
 - Auto-initialization via `npm install`
 
