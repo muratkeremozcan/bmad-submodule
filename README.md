@@ -52,3 +52,14 @@ git clone --recurse-submodules <your-repo>
 git submodule update --init --recursive
 ```
 
+## Update this submodule at your repo
+
+Nav to the submodule folder, pull, nav to repo root and commit.
+
+```bash
+  cd youre-repo/bmad-submodule
+  git pull origin main
+  cd ..
+  git add bmad-submodule
+  git commit -m "Update BMAD" 
+```
