@@ -26,6 +26,10 @@
 - Path: `bmad/bmm/workflows/1-analysis/research/workflow.yaml`
 - Adaptive research workflow supporting multiple research types: market research, deep research prompt generation, technical/architecture evaluation, competitive intelligence, user research, and domain analysis
 
+**create-ux-design**
+- Path: `bmad/bmm/workflows/2-plan-workflows/create-ux-design/workflow.yaml`
+- Collaborative UX design facilitation workflow that creates exceptional user experiences through visual exploration and informed decision-making. Unlike template-driven approaches, this workflow facilitates discovery, generates visual options, and collaboratively designs the UX with the user at every step.
+
 **gdd**
 - Path: `bmad/bmm/workflows/2-plan-workflows/gdd/workflow.yaml`
 - Game Design Document workflow for all game project levels - from small prototypes to full AAA games. Generates comprehensive GDD with game mechanics, systems, progression, and implementation guidance.
@@ -41,10 +45,6 @@
 **tech-spec-sm**
 - Path: `bmad/bmm/workflows/2-plan-workflows/tech-spec/workflow.yaml`
 - Technical specification workflow for Level 0 projects (single atomic changes). Creates focused tech spec for bug fixes, single endpoint additions, or small isolated changes. Tech-spec only - no PRD needed.
-
-**ux-spec**
-- Path: `bmad/bmm/workflows/2-plan-workflows/ux/workflow.yaml`
-- UX/UI specification workflow for defining user experience and interface design. Creates comprehensive UX documentation including wireframes, user flows, component specifications, and design system guidelines.
 
 **architecture**
 - Path: `bmad/bmm/workflows/3-solutioning/architecture/workflow.yaml`
@@ -88,47 +88,11 @@
 
 **story-done**
 - Path: `bmad/bmm/workflows/4-implementation/story-done/workflow.yaml`
-- Marks a story as done (DoD complete) and moves it from IN PROGRESS → DONE in the status file. Advances the story queue. Simple status-update workflow with no searching required.
+- Marks a story as done (DoD complete) and moves it from its current status → DONE in the status file. Advances the story queue. Simple status-update workflow with no searching required.
 
 **story-ready**
 - Path: `bmad/bmm/workflows/4-implementation/story-ready/workflow.yaml`
 - Marks a drafted story as ready for development and moves it from TODO → IN PROGRESS in the status file. Simple status-update workflow with no searching required.
-
-**sprint-status**
-- Path: `bmad/bmm/workflows/helpers/sprint-status/workflow.yaml`
-- Helper workflow for reading and updating sprint-status.yaml tracking file. Provides query and update operations for Phase 4 implementation workflows.
-
-**testarch-atdd**
-- Path: `bmad/bmm/workflows/testarch/atdd/workflow.yaml`
-- Generate failing acceptance tests before implementation using TDD red-green-refactor cycle
-
-**testarch-automate**
-- Path: `bmad/bmm/workflows/testarch/automate/workflow.yaml`
-- Expand test automation coverage after implementation or analyze existing codebase to generate comprehensive test suite
-
-**testarch-ci**
-- Path: `bmad/bmm/workflows/testarch/ci/workflow.yaml`
-- Scaffold CI/CD quality pipeline with test execution, burn-in loops, and artifact collection
-
-**testarch-framework**
-- Path: `bmad/bmm/workflows/testarch/framework/workflow.yaml`
-- Initialize production-ready test framework architecture (Playwright or Cypress) with fixtures, helpers, and configuration
-
-**testarch-nfr**
-- Path: `bmad/bmm/workflows/testarch/nfr-assess/workflow.yaml`
-- Assess non-functional requirements (performance, security, reliability, maintainability) before release with evidence-based validation
-
-**testarch-test-design**
-- Path: `bmad/bmm/workflows/testarch/test-design/workflow.yaml`
-- Plan risk mitigation and test coverage strategy before development with risk assessment and prioritization
-
-**testarch-test-review**
-- Path: `bmad/bmm/workflows/testarch/test-review/workflow.yaml`
-- Review test quality using comprehensive knowledge base and best practices validation
-
-**testarch-trace**
-- Path: `bmad/bmm/workflows/testarch/trace/workflow.yaml`
-- Generate requirements-to-tests traceability matrix, analyze coverage, and make quality gate decision (PASS/CONCERNS/FAIL/WAIVED)
 
 **workflow-init**
 - Path: `bmad/bmm/workflows/workflow-status/init/workflow.yaml`
@@ -136,7 +100,7 @@
 
 **workflow-status**
 - Path: `bmad/bmm/workflows/workflow-status/workflow.yaml`
-- Lightweight status checker - answers 'what should I do now?' for any agent. Reads simple key-value status file for instant parsing. Use workflow-init for new projects.
+- Lightweight status checker - answers "what should I do now?" for any agent. Reads simple key-value status file for instant parsing. Use workflow-init for new projects.
 
 
 ## Execution
