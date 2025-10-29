@@ -2,21 +2,9 @@
 
 ## Available Workflows in bmm
 
-**brainstorm-game**
-- Path: `bmad/bmm/workflows/1-analysis/brainstorm-game/workflow.yaml`
-- Facilitate game brainstorming sessions by orchestrating the CIS brainstorming workflow with game-specific context, guidance, and additional game design techniques.
-
 **brainstorm-project**
 - Path: `bmad/bmm/workflows/1-analysis/brainstorm-project/workflow.yaml`
 - Facilitate project brainstorming sessions by orchestrating the CIS brainstorming workflow with project-specific context and guidance.
-
-**document-project**
-- Path: `bmad/bmm/workflows/1-analysis/document-project/workflow.yaml`
-- Analyzes and documents brownfield projects by scanning codebase, architecture, and patterns to create comprehensive reference documentation for AI-assisted development
-
-**game-brief**
-- Path: `bmad/bmm/workflows/1-analysis/game-brief/workflow.yaml`
-- Interactive game brief creation workflow that guides users through defining their game vision with multiple input sources and conversational collaboration
 
 **product-brief**
 - Path: `bmad/bmm/workflows/1-analysis/product-brief/workflow.yaml`
@@ -29,10 +17,6 @@
 **create-ux-design**
 - Path: `bmad/bmm/workflows/2-plan-workflows/create-ux-design/workflow.yaml`
 - Collaborative UX design facilitation workflow that creates exceptional user experiences through visual exploration and informed decision-making. Unlike template-driven approaches, this workflow facilitates discovery, generates visual options, and collaboratively designs the UX with the user at every step.
-
-**gdd**
-- Path: `bmad/bmm/workflows/2-plan-workflows/gdd/workflow.yaml`
-- Game Design Document workflow for all game project levels - from small prototypes to full AAA games. Generates comprehensive GDD with game mechanics, systems, progression, and implementation guidance.
 
 **narrative**
 - Path: `bmad/bmm/workflows/2-plan-workflows/narrative/workflow.yaml`
@@ -54,6 +38,10 @@
 - Path: `bmad/bmm/workflows/3-solutioning/solutioning-gate-check/workflow.yaml`
 - Systematically validate that all planning and solutioning phases are complete and properly aligned before transitioning to Phase 4 implementation. Ensures PRD, architecture, and stories are cohesive with no gaps or contradictions.
 
+**code-review**
+- Path: `bmad/bmm/workflows/4-implementation/code-review/workflow.yaml`
+- Perform a Senior Developer code review on a completed story flagged Ready for Review, leveraging story-context, epic tech-spec, repo docs, MCP servers for latest best-practices, and web search as fallback. Appends structured review notes to the story.
+
 **correct-course**
 - Path: `bmad/bmm/workflows/4-implementation/correct-course/workflow.yaml`
 - Navigate significant changes during sprint execution by analyzing impact, proposing solutions, and routing for implementation
@@ -74,10 +62,6 @@
 - Path: `bmad/bmm/workflows/4-implementation/retrospective/workflow.yaml`
 - Run after epic completion to review overall success, extract lessons learned, and explore if new information emerged that might impact the next epic
 
-**review-story**
-- Path: `bmad/bmm/workflows/4-implementation/review-story/workflow.yaml`
-- Perform a Senior Developer Review on a completed story flagged Ready for Review, leveraging story-context, epic tech-spec, repo docs, MCP servers for latest best-practices, and web search as fallback. Appends structured review notes to the story.
-
 **sprint-planning**
 - Path: `bmad/bmm/workflows/4-implementation/sprint-planning/workflow.yaml`
 - Generate and manage the sprint status tracking file for Phase 4 implementation, extracting all epics and stories from epic files and tracking their status through the development lifecycle
@@ -93,6 +77,10 @@
 **story-ready**
 - Path: `bmad/bmm/workflows/4-implementation/story-ready/workflow.yaml`
 - Marks a drafted story as ready for development and moves it from TODO → IN PROGRESS in the status file. Simple status-update workflow with no searching required.
+
+**document-project**
+- Path: `bmad/bmm/workflows/document-project/workflow.yaml`
+- Analyzes and documents brownfield projects by scanning codebase, architecture, and patterns to create comprehensive reference documentation for AI-assisted development
 
 **workflow-init**
 - Path: `bmad/bmm/workflows/workflow-status/init/workflow.yaml`
