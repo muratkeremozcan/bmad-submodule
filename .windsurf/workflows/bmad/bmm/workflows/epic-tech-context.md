@@ -1,3 +1,8 @@
+---
+description: epic-tech-context
+auto_execution_mode: 1
+---
+
 name: epic-tech-context
 description: "Generate a comprehensive Technical Specification from PRD and Architecture with acceptance criteria and traceability mapping"
 author: "BMAD BMM"
