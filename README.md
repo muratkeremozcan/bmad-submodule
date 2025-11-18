@@ -61,7 +61,7 @@ Nav to the submodule folder, pull, nav to repo root and commit.
   git pull origin main
   cd ..
   git add bmad-submodule
-  git commit -m "Update BMAD" 
+  git commit -m "Update BMAD"
 ```
 
 ### Clean installing (or renaming the submodule) at your repo
@@ -82,3 +82,5 @@ Nav to the submodule folder, pull, nav to repo root and commit.
   ls -la bmad-submodule/
   git submodule status
 ```
+
+<!-- TODO: -->
