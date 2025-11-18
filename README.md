@@ -57,7 +57,7 @@ git submodule update --init --recursive
 Nav to the submodule folder, pull, nav to repo root and commit.
 
 ```bash
-  cd youre-repo/bmad-submodule
+  cd your-repo/bmad-submodule
   git pull origin main
   cd ..
   git add bmad-submodule
