@@ -35,7 +35,7 @@ Add to `package.json`:
 ```json
 {
   "scripts": {
-    "postinstall": "git submodule update --init --recursive || true"
+    "postinstall": "git submodule update --init --recursive --force"
   }
 }
 ```
