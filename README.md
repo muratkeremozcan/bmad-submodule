@@ -60,6 +60,7 @@ Nav to the submodule folder, pull, nav to repo root and commit.
   cd your-repo/bmad-submodule
   git pull origin main
   cd ..
+  npm install # because we need to run the postscript
   git add bmad-submodule
   git commit -m "Update BMAD"
   git push
