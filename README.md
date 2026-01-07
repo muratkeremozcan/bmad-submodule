@@ -31,11 +31,12 @@ git submodule update
 ### Auto-Initialize (Recommended)
 
 Add to `package.json`:
+This script only runs locally.
 
 ```json
 {
   "scripts": {
-    "postinstall": "git submodule update --init --recursive --force"
+    "postinstall": "[ -z \"$CI\" ] && git submodule update --init --recursive --force || true"
   }
 }
 ```
@@ -85,4 +86,40 @@ Nav to the submodule folder, pull, nav to repo root and commit.
   git submodule status
 ```
 
-<!-- TODO: -->
+---
+
+## CI/CD Compatibility
+
+### Why HTTPS over SSH?
+
+Note that, if you want something like this in a private organization, GitHub Actions runners cannot clone private repos via SSH without explicit key configuration. 
+
+Using HTTPS URLs allows the `GITHUB_TOKEN` to authenticate automatically.
+
+**SSH URL (may breaks in private org CI):**
+
+```
+git@github.com:seontechnologies/seon-bmad.git
+```
+
+**HTTPS URL (works in private org in CI):**
+
+```
+https://github.com/seontechnologies/seon-bmad.git
+```
+
+### GitHub Actions Workflow Requirements
+
+Ensure your workflow has `contents: read` permission (default for `GITHUB_TOKEN`):
+
+```yaml
+jobs:
+  build:
+    permissions:
+      contents: read # Allows cloning private repos in same org
+    steps:
+      - uses: actions/checkout@v4
+      # npm install will now successfully clone the submodule
+```
+
+---
