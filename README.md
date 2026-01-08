@@ -26,6 +26,7 @@ A submodule is a pointer to another git repository, akin to a bookmark. Your rep
 git submodule add https://github.com/muratkeremozcan/bmad-submodule.git bmad-submodule
 git submodule init
 git submodule update
+git config -f .gitmodules submodule.bmad-submodule.ignore dirty
 ```
 
 ### Auto-Initialize (Recommended)
@@ -123,3 +124,23 @@ jobs:
 ```
 
 ---
+
+
+## Troubleshooting
+
+### Dirty Submodule Status
+
+If `git status` shows `bmad-submodule (modified content)`, it's caused by editor auto-formatting (e.g., VSCode's `files.trimTrailingWhitespace`). The setup includes `ignore dirty` config to prevent this.
+
+**If you see it anyway (legacy setup), run:**
+
+```bash
+git config -f .gitmodules submodule.bmad-submodule.ignore dirty
+```
+
+**Manual reset (if needed):**
+
+```bash
+git submodule foreach --recursive git checkout .
+```
+
