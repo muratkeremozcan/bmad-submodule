@@ -70,21 +70,30 @@ Nav to the submodule folder, pull, nav to repo root and commit.
 
 ### Clean installing (or renaming the submodule) at your repo
 
+This script is idempotent and can be run repeatedly:
+
 ```bash
-  # 1. Completely remove current submodule
-  git submodule deinit -f bmad-submodule
-  git rm -f bmad-submodule
-  rm -rf .git/modules/bmad-submodule
+# 1. Reset any staged/unstaged changes first
+git reset HEAD -- .gitmodules bmad-submodule 2>/dev/null || true
+git checkout HEAD -- .gitmodules 2>/dev/null || true
 
-  # 2. Empty .gitmodules
-  echo "" > .gitmodules
+# 2. Completely remove current submodule
+git submodule deinit -f bmad-submodule 2>/dev/null || true
+git rm -f bmad-submodule 2>/dev/null || true
+rm -rf bmad-submodule
+rm -rf .git/modules/bmad-submodule
 
-  # 3. Re-add with desired name
-  git submodule add https://github.com/muratkeremozcan/bmad-submodule.git bmad-submodule
+# 3. Clean .gitmodules (remove entry if exists) and stage it
+git config -f .gitmodules --remove-section submodule.bmad-submodule 2>/dev/null || true
+git add .gitmodules
 
-  # 4. Verify
-  ls -la bmad-submodule/
-  git submodule status
+# 4. Re-add with HTTPS URL
+git submodule add https://github.com/muratkeremozcan/bmad-submodule.git bmad-submodule
+git config -f .gitmodules submodule.bmad-submodule.ignore dirty
+
+# 5. Verify
+ls -la bmad-submodule/
+git submodule status
 ```
 
 ---
